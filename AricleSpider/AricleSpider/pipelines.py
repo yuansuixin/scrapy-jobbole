@@ -16,13 +16,15 @@ class AriclespiderPipeline(object):
         return item
 
 class JsonWithEncodingPipeline(object):
-    def __int__(self):
+    def __init__(self):
         # 完成文件的打开和写入
         self.file = codecs.open('article.json','w',encoding='utf-8')
 
     def process_item(self,item,spider):
         #ensure_ascii编码问题，如果不设置的话，其他编码容易出错
+        print('item',item)
         lines = json.dumps(dict(item),ensure_ascii=False)+'/n'
+        print(lines)
         self.file.write(lines)
         # 一定要return出去，下一个需要接收
         return item
