@@ -19,4 +19,8 @@
 
 - 使用execute函数执行scrapy的脚本，写成main函数的形式，动态获取工程目录便于调试
 
+- 配置mysql
+
+  ![配置mysql表](http://p693ase25.bkt.clouddn.com/Untitled-1-20183300756.png)
+
 
